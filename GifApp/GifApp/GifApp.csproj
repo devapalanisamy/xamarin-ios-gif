@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{EF4D5940-5358-42FC-8A5F-02B1FA3987A3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GifApp</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>GifApp</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.13.0\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\tmp-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
+    <InterfaceDefinition Include="Main.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="ViewController.cs" />
+    <Compile Include="ViewController.designer.cs">
+      <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <BundleResource Include="Gif Images\tmp-10.png" />
+    <BundleResource Include="Gif Images\tmp-11.png" />
+    <BundleResource Include="Gif Images\tmp-13.png" />
+    <BundleResource Include="Gif Images\tmp-14.png" />
+    <BundleResource Include="Gif Images\tmp-17.png" />
+    <BundleResource Include="Gif Images\tmp-18.png" />
+    <BundleResource Include="Gif Images\tmp-19.png" />
+    <BundleResource Include="Gif Images\tmp-2.png" />
+    <BundleResource Include="Gif Images\tmp-20.png" />
+    <BundleResource Include="Gif Images\tmp-21.png" />
+    <BundleResource Include="Gif Images\tmp-22.png" />
+    <BundleResource Include="Gif Images\tmp-23.png" />
+    <BundleResource Include="Gif Images\tmp-24.png" />
+    <BundleResource Include="Gif Images\tmp-25.png" />
+    <BundleResource Include="Gif Images\tmp-26.png" />
+    <BundleResource Include="Gif Images\tmp-27.png" />
+    <BundleResource Include="Gif Images\tmp-28.png" />
+    <BundleResource Include="Gif Images\tmp-29.png" />
+    <BundleResource Include="Gif Images\tmp-3.png" />
+    <BundleResource Include="Gif Images\tmp-30.png" />
+    <BundleResource Include="Gif Images\tmp-31.png" />
+    <BundleResource Include="Gif Images\tmp-32.png" />
+    <BundleResource Include="Gif Images\tmp-33.png" />
+    <BundleResource Include="Gif Images\tmp-34.png" />
+    <BundleResource Include="Gif Images\tmp-35.png" />
+    <BundleResource Include="Gif Images\tmp-36.png" />
+    <BundleResource Include="Gif Images\tmp-37.png" />
+    <BundleResource Include="Gif Images\tmp-38.png" />
+    <BundleResource Include="Gif Images\tmp-39.png" />
+    <BundleResource Include="Gif Images\tmp-4.png" />
+    <BundleResource Include="Gif Images\tmp-40.png" />
+    <BundleResource Include="Gif Images\tmp-41.png" />
+    <BundleResource Include="Gif Images\tmp-42.png" />
+    <BundleResource Include="Gif Images\tmp-43.png" />
+    <BundleResource Include="Gif Images\tmp-5.png" />
+    <BundleResource Include="Gif Images\tmp-6.png" />
+    <BundleResource Include="Gif Images\tmp-7.png" />
+    <BundleResource Include="Gif Images\tmp-8.png" />
+    <BundleResource Include="Gif Images\tmp-9.png" />
+    <BundleResource Include="Gif Images\tmp-1.png" />
+    <BundleResource Include="Gif Images\tmp-0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Gif Images\tmp-12.png" />
+    <Content Include="Gif Images\tmp-15.png" />
+  </ItemGroup>
+</Project>
